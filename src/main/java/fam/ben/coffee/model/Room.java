@@ -13,6 +13,15 @@ public class Room {
     private String number;
     private String badInfo;
 
+    public Room() {
+    }
+
+    public Room(final String name, final String number, final String badInfo) {
+        this.name = name;
+        this.number = number;
+        this.badInfo = badInfo;
+    }
+
     public String getId() {
         return id;
     }

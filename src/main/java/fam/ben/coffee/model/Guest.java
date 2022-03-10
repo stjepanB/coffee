@@ -17,6 +17,19 @@ public class Guest {
     private String state;
     private String phoneNumber;
 
+    public Guest() {
+    }
+
+    public Guest(final String firstName, final String lastName, final String emailAddress, final String address, final String country, final String state, final String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailAddress = emailAddress;
+        this.address = address;
+        this.country = country;
+        this.state = state;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getId() {
         return id;
     }

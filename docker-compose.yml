@@ -15,7 +15,7 @@ services:
       - MONGO_DB_PASSWORD=$MONGO_DB_PASSWORD
     networks:
       - main-network
-    command: ["--bind_ip", "0.0.0.0"]
+    command: [ "--bind_ip", "0.0.0.0" ]
 
   web:
     build:
@@ -32,7 +32,7 @@ services:
       - SERVER_PORT=8000
       - SPRING_PROFILES_ACTIVE=prod
       - SPRING_APPLICATION_NAME=$APP_NAME
-      - SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE=$MONGO_DB
+      - SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE=admin
       - SPRING_DATA_MONGODB_AUTO_INDEX_CREATION=$MONGO_AUTO_INDEX_CREATION
       - SPRING_DATA_MONGODB_HOST=mongo
       - SPRING_DATA_MONGODB_PORT=27017
@@ -44,5 +44,4 @@ services:
 
 networks:
   main-network:
-    external:
-      name: $NETWORK_NAME
+    name: $NETWORK_NAME
